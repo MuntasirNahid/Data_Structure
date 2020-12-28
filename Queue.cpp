@@ -2,6 +2,8 @@
 Push- last
 Pop- first
 front()-first
+
+enqueue=push_back()...dequeue=pop_front()...
 */
 #include<bits/stdc++.h>
 using namespace std;
