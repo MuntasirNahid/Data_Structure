@@ -5,7 +5,7 @@ void printprq(priority_queue<int>p)
 {
 	while (!p.empty())
 	{
-		cout << p.top() << " ";
+		cout << p.top() << " ";//top=front one
 		p.pop();
 	}
 	//or iterator use korey kora jay...
