@@ -26,7 +26,7 @@ int bfs(int s, int d)
 			if (visited[u] == true)continue;
 			visited[u] = true;
 			q.push({u, cost + 1});//porer level e..cost 1 bere gelo..
-			parent[u] = node;//u er parent=node k korey dilam..
+			
 		}
 
 	}
@@ -52,3 +52,10 @@ int main()
 
 
 }
+/*
+3 3
+0 1
+0 2
+2 3
+0 3
+*/
