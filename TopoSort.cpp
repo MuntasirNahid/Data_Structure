@@ -1,6 +1,9 @@
 /* Your Love Makes Me STRONG,
    Your Hate Makes Me UNSTOPABBLE.
 */
+//dependency er upor nirvor korey..
+//impossible to do a toposort if there are any cycle..
+
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
