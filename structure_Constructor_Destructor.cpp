@@ -79,3 +79,5 @@ int main()
 // Bye Bye!  x > 176
 // Bye Bye!  x > 5000
 // Bye Bye!  x > 117
+
+//for more: https://www.geeksforgeeks.org/difference-between-constructor-and-destructor-in-c/
