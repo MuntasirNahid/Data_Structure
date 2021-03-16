@@ -17,8 +17,10 @@ But time complexity of this would be O(VE Log V) which can go (V3 Log V) in wors
 
 /*jekono node theke jekono node e jawar kono way ache kina check kora jay..
 P0(p zero/p not)=vi and vj er  moddhe direct edge thakley 1 ..direct edge na thakle 0(if there is an edge between vi and vj)
-p1=only v1 vaya hoye jeshob vi and vj node  e jawa jay sheshob node 1 korey dibo..+direct edge(if there is a simple path vi and vj which does not use any other node except possibly v1)
-p2= only v1 and v2 vaya hoye jeshob node e jawa jay sheshob node 1 korey dibo..+direct edge(if there is a simple path vi and vj which does not use any other node except possibly v1 and v2)
+p1=only v1 vaya hoye jeshob vi and vj node  e jawa jay sheshob node 1 korey dibo..+direct edge(if there is a simple path vi and vj which does not use 
+any other node except possibly v1).
+p2= only v1 and v2 vaya hoye jeshob node e jawa jay sheshob node 1 korey dibo..+direct edge(if there is a simple path vi and vj which does not use
+any other node except possibly v1 and v2)
 and so on..
 
 //final path matrix Pn ke amra reachability matrix bole thake.
