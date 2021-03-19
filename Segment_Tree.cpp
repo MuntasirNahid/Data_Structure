@@ -19,6 +19,7 @@
 //ekbare child node e giye update na korey child node ta jei parent node er under a achey oitakey update korey.so that,comparison onek kome jay.
 //jokhn dorkar tokhn update korey(oi range e query thakley)..dorkar na porley update korey na.
 // When we need to update an interval, we will update a node and mark its child that it needs to be updated and update it when needed.
+//range update er khetrey valo kaj korey thake.
 
 #include <iostream>
 #define sz 40000
