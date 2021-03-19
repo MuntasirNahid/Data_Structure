@@ -1,4 +1,5 @@
 //finding shortest path between two node..have no weight..
+//directed graph a bfs hobe na..cycle thakuk ar na thakuk
 #include<iostream>
 #include<vector>
 #include<queue>
