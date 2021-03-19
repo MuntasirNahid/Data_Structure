@@ -12,7 +12,7 @@
 //query range er vitore kono chunk porley seta key include kore nibo sum er  moddhe,
 //update er khetrey just parent gulo k update diye diye jabo..
 
-//complexity of every query and updates is(log N);
+//complexity of every query and updates is(log N); Build=memory=(nlogN);
 
 //LAZY PROPAGATION:
 //-------------------
