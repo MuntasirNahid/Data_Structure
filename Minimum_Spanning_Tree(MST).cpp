@@ -1,9 +1,11 @@
 /*
 What is a Spanning Tree?
-Given an undirected and connected graph , a spanning tree of the graph  is a tree that spans  (that is, it includes every vertex of ) and is a subgraph of  (every edge in the tree belongs to )
+Given an undirected and connected graph , a spanning tree of the graph  is a tree that spans  (that is, it includes every vertex of ) and is a subgraph of 
+(every edge in the tree belongs to )
 
 What is a Minimum Spanning Tree?
-The cost of the spanning tree is the sum of the weights of all the edges in the tree. There can be many spanning trees. Minimum spanning tree is the spanning tree where the cost is minimum among all the spanning trees. There also can be many minimum spanning trees.
+The cost of the spanning tree is the sum of the weights of all the edges in the tree. There can be many spanning trees. Minimum spanning tree is the spanning tree 
+where the cost is minimum among all the spanning trees. There also can be many minimum spanning trees.
 */
 
 
