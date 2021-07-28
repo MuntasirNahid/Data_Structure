@@ -1,4 +1,4 @@
-/*Signle source shortest path.
+/*Single source shortest path.
 edge gular weight same na holey amra bfs er poribortey "dijkstra" use korey thaki...
 sorce node ke 0 diye ,bakider infinity diye initialize.
 
