@@ -74,7 +74,7 @@ int main()
 // x is incremented by 77 and x = 117
 // x is initialized with = 599
 // x is initialized with = 67
-// Bye Bye!  x > 67
+// Bye Bye!  x > 67   //void hello function end er sathey sathey destroy..
 // x is incremented by 77 and x = 176
 // Bye Bye!  x > 176
 // Bye Bye!  x > 5000
