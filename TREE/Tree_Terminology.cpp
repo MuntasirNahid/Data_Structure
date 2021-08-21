@@ -1,7 +1,8 @@
 /*Tree is a special type of graph which has no cycle..
 
 Complete Binary Tree:
-The tree T is said to be complete binary tree if all its levels ,except possibly the last ,have the maximum number of possible nodes,and if all the nodes at the appear as far left as possible .
+The tree T is said to be complete binary tree if all its levels ,except possibly the last ,have the maximum number of possible nodes,
+and if all the nodes at the appear as far left as possible .
 
 jekono shonkhok n er jonno complete binary tree unique.
 
