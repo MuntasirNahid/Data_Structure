@@ -1,12 +1,3 @@
-/* Your Love Makes Me STRONG,
-   Your Hate Makes Me UNSTOPABBLE.
-
-   HOPE is a good thing,maybe the BEST of things.
-   And no GOOD Things EVER DIES.
-
-   Keep calm,Be patient And Chase Your DREAM
-
-*/
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
