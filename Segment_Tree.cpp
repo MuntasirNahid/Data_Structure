@@ -1,9 +1,16 @@
-/*A Segment Tree is a data structure that allows answering range queries over an array effectively, while still being flexible enough to allow modifying the array. This includes finding the sum of consecutive array elements a[l…r], or finding the minimum element in a such a range in O(logn) time. Between answering such queries the Segment Tree allows modifying the array by replacing one element, or even change the elements of a whole subsegment (e.g. assigning all elements a[l…r] to any value, or adding a value to all element in the subsegment).
+/*A Segment Tree is a data structure that allows answering range queries over an array effectively, while still being flexible enough to allow modifying the array. 
+This includes finding the sum of consecutive array elements a[l…r], or finding the minimum element in a such a range in O(logn) time. 
+Between answering such queries the Segment Tree allows modifying the array by replacing one element, or even change the elements of a whole subsegment 
+(e.g. assigning all elements a[l…r] to any value, or adding a value to all element in the subsegment).
 */
+//Divide and Conquer method use korey thakey
 
-//ekta range er moddhe  element er sum ber kortey holey cummulative sum ber korey kora jay..but jodi koyekta element er value update korey tahole oi element er pore joto element ache shobgular cummolative sum update kortey hoy..seshob er jonno segment tree use koras hoye thakey..
+//ekta range er moddhe  element er sum ber kortey holey cummulative sum ber korey kora jay.
+//but jodi koyekta element er value update korey tahole oi element er pore joto element ache 
+//shobgular cummolative sum update kortey hoy..seshob er jonno segment tree use kora hoye thakey..
 
-//n er range takey (0-n) binary search er moto korey barbar duivag kortey thakbo..jotokkhn na 0-0,1-1,2-2,..n-n emon na ashey..protita node e tar child node gular sum thakbey..
+//n er range takey (0-n) binary search er moto korey barbar duivag kortey thakbo..
+//jotokkhn na 0-0,1-1,2-2,..n-n emon na ashey..protita node e tar child node gular sum thakbey..
 //range er upper bound and lower bound kon kon chunk er moddhe porey oita check kortey hobey.
 //range direct kono chunk er moddhe na porley vangtey hobe(child tree tey jaitey hobey)..
 //mane puro query range ta kono chunk er range er moddhe na porley vangtey hobey(overlapping ache)
@@ -26,12 +33,11 @@
 using namespace std;
 int tree[sz];
 
-void update(int ind, int lb, int ub, int pos, int val)//pos=kon position er moddhe update ta dibo..val=update 
-//kore kon value ta rakhbo..
+void update(int ind, int lb, int ub, int pos, int val)//pos=kon position er moddhe update ta dibo..val=update kore kon value ta rakhbo..
 {
     if(pos < lb || ub < pos) return;//range er moddhei nai..
 
-    if(lb==ub)//0-0,1-1...emon....update dewar ashol jayga.
+     if(lb==ub)//0-0,1-1...emon....update dewar ashol jayga.
     {
         if(lb == pos)//or ub==pos..same kotha e.
             tree[ind] = val;//update diye dilam
@@ -64,8 +70,12 @@ int main()
     for (int i = 0; i<n; i++)
     {
         cin >> x;
-        update(1,0,n-1,i,x);// start node er moddhe 1.mane root node(0-(n-1)) ta hocche 1 index er moddhe..left child hocche 2*k inddex e..right child hocche 2*k_1 index er moddhe
-        // ..0,n-1-->tree ta koto theke koto index er moddhe construct korchi. 
+        update(1,0,n-1,i,x);// start node er moddhe 1.mane root node(0-(n-1)) ta hocche 1 index er moddhe..
+        //left child hocche 2*k inddex e..right child hocche (2*k)+1 index er moddhe
+        //0,n-1-->tree ta koto theke koto index er moddhe construct korchi.
+        //0,n-1->update er index ta kon range er vitore
+        //i=update ta jei index er moddhe
+        //x=joto update 
     }
 
     cin >> q;
