@@ -43,3 +43,11 @@ Time complexity to query is O(Logn). To query a sum, we process at most four nod
 The time complexity of update is also O(Logn). To update a leaf value, we process one node at every level and number of levels is O(Logn).
 
 //------------------------------------Lazy Propagation-----------------------------------------
+
+//Segment tree er special Type
+//Efficient for range update or range Query
+
+
+
+//##-------------------------------------------------------------------------------------------------##
+
