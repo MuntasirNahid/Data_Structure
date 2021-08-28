@@ -27,7 +27,7 @@ struct BST {
 	node *root;
 	/// constructor
 	BST();
-	///utility function
+	///utility function->Nijer kaj ke shohoj korar jonno banano function.bahir theke kew call korena
 	node* find_child(int, node*);
 	node* find_succ(node*);
 	node* find_node(int);
