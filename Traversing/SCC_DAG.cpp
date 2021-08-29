@@ -1,7 +1,7 @@
 //shafaet er blog..
 
 //SCC=Strongly Connected Components.(Component gular jekono duiuta node er moddhe jawa and asha duita way e thaakbe must)
-//DAG=Directed Acyclic Graph.(Kono Cycle Thaktey Parbey na)
+//DAG=Directed Acyclic Graph.(Kono Cycle Thaktey Parbey na..SCC gular majhey ekta edge)
 
 
 #include<iostream>
