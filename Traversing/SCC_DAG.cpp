@@ -1,12 +1,16 @@
 //shafaet er blog..
 
+//SCC=Strongly Connected Components.(Component gular jekono duiuta node er moddhe jawa and asha duita way e thaakbe must)
+//DAG=Directed Acyclic Graph.(Kono Cycle Thaktey Parbey na)
+
+
 #include<iostream>
 #include<vector>
 #include<stack>
 #define sz 1000
 using namespace std;
 
-vector<int> adj[sz], radj[sz], nadj[sz], components[sz];//radj->reverse adjacent gula..(reverse raph er khetre)..nadj->dag er  new adjacent gula..
+vector<int> adj[sz], radj[sz], nadj[sz], components[sz];//radj->reverse adjacent gula..(reverse graph er khetre)..nadj->dag er  new adjacent gula..
 bool col[sz], vis[sz];
 int group_id[sz];
 stack<int>stk;
@@ -35,7 +39,7 @@ int findSCC(int n)
     int mark=0, u;
     for (int i = 0; i<n; i++)
         if(!col[i])//col ==0 mane ekhno color kora hoy nai...
-            DFS(i);//dfs e pathalam...finishing time inujayi node sort korar jonno
+            DFS(i);//dfs e pathalam...finishing time onujayi node sort korar jonno
 
     while(!stk.empty())
     {
