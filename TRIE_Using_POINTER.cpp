@@ -9,7 +9,7 @@ struct node{
     {
         ending = false;
         for (int i = 0; i<trie_sz; i++)
-            next[i] = NULL;//proti ta digit er por 26 ta pkace k null korey initialize korey rakhlam...
+            next[i] = NULL;//proti ta digit er por 26 ta place k null korey initialize korey rakhlam...
     }
 };
 
@@ -35,7 +35,7 @@ void TRIE::insert_into_trie(string &str){
     {
         now = str[i] - 'a';
         if(cur->next[now] == NULL)//jodi null thakey porer ta..
-            cur->next[now] =  new node();//null holey pore new node creake korlam...
+            cur->next[now] =  new node();//null holey pore new node create korlam...
         cur = cur->next[now];//cur ke cur er next korey dilam...1 step nisey namlo...
     }
     cur->ending =  true;//word shesh..ekhn ending ta true korey dilam...
@@ -82,7 +82,7 @@ int main()
         cout <<"Query Number "<<i+1<<" :"<<str<<endl;
         cout<<"Result :" <<str<<" does " << (tr->search_into_trie(str)?"":"not ") << "exist!" << endl;
     }
-    tr->delete_from_trie();//multiple test case er jpnnp delete ta kaje lagey...
+    tr->delete_from_trie();//multiple test case er jonno delete ta kaje lagey...
     return 0;
 }
 /**
