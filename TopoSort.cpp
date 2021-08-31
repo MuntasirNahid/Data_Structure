@@ -43,7 +43,7 @@ vector<int>TopoSort(int n)
 
 }
 
-void init(int n)//must for nultiple test cases
+void init(int n)//must for multiple test cases
 {
 	for (i = 0; i < n; i++)
 		indeg[i] = 0;
