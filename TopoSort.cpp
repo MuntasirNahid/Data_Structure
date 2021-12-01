@@ -1,4 +1,4 @@
-//dependency er upor nirvor korey kajer orering korar jonno use kora hoye thakey..
+//dependency er upor nirvor korey kajer ordering korar jonno use kora hoye thakey..
 //another way to do toposort is DFS.
 //impossible to do a toposort if there are any cycle..
 
