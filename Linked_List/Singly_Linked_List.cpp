@@ -288,8 +288,8 @@ void SinglyLinkedList::insertIntoTail(int x){
         head = tail = cur;
         return;
     }
-    tail->next = cur;
-    tail = tail->next;
+    tail->next = cur;//ager tail er next k boley dilam current k point kortey
+    tail = tail->next;//tail=new current ..which means inderted into tail
 }
 
 void SinglyLinkedList::insertIntoHead(int x){

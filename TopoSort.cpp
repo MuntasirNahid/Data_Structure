@@ -1,7 +1,5 @@
-/* Your Love Makes Me STRONG,
-   Your Hate Makes Me UNSTOPABBLE.
-*/
-//dependency er upor nirvor korey..
+//dependency er upor nirvor korey kajer ordering korar jonno use kora hoye thakey..
+//another way to do toposort is DFS.
 //impossible to do a toposort if there are any cycle..
 
 #include<bits/stdc++.h>
@@ -38,14 +36,14 @@ vector<int>TopoSort(int n)
 		for (i = 0; i < adj[x].size(); i++) //x theke kothay kothay jawa jay check..
 		{
 			if (--indeg[ adj[x][i] ] == 0)q.push(adj[x][i]); //x theke jegulay jawa jay shegular indeg "--"" korey dilam.
-			//indeg =0 hoye gele shetakey q tey pyush korey dilam...
+			//indeg =0 hoye gele shetakey q tey push korey dilam...mane oitar ager dependency =0 hoye gelo..now it's independent
 		}
 	}
 	return res;
 
 }
 
-void init(int n)//must for nultiple test cases
+void init(int n)//must for multiple test cases
 {
 	for (i = 0; i < n; i++)
 		indeg[i] = 0;

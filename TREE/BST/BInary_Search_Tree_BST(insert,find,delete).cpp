@@ -27,7 +27,7 @@ struct BST {
 	node *root;
 	/// constructor
 	BST();
-	///utility function
+	///utility function->Nijer kaj ke shohoj korar jonno banano function.bahir theke kew call korena
 	node* find_child(int, node*);
 	node* find_succ(node*);
 	node* find_node(int);
@@ -96,7 +96,7 @@ void BST::del(int x)
 {
 	node *temp = find_node(x), *temp_child, *in_succ;
 
-	/// case 1
+	/// case 1->Right and left kono child nai
 	if (temp->left == NULL && temp->right == NULL) {
 		if (temp == root)
 			root = NULL;
@@ -107,7 +107,7 @@ void BST::del(int x)
 		delete temp;
 		return;
 	}
-	/// case 2
+	/// case 2->jekono ekta child achey(left or right)
 	if (temp->left == NULL || temp->right == NULL) {
 		temp_child =  temp->left == NULL ? temp->right : temp->left;
 		if (temp == root)
@@ -124,7 +124,7 @@ void BST::del(int x)
 		delete temp;
 		return;
 	}
-	/// case 3
+	/// case 3->(left and right child is available here)
 	in_succ = find_succ(temp);
 	node *cur = new node(in_succ->val);
 
