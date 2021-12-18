@@ -1,6 +1,6 @@
 //right skewed tree or left skewed tree er vejal dur korar jonno AVl tree banano hoisey.
 //An empty Binary tree is an AVL tree.
-//hight of left subtree and height of right subtree er parthokko 1 or -1 or 0 hoitey hobey.
+//height of left subtree and height of right subtree er parthokko 1 or -1 or 0 hoitey hobey.
 // BF(balance factor)=h(l)-h(r)<=1
 //shob gula node er balance factor er man -1,0,1 er moddhe ekta hoiley take balanced avl tree bola hoy..na hoiley takey unbalanced avl tree bola hoy
 //insert korar shomoy bar bar rotation korey balance kore nitey hobey.
