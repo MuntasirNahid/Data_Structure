@@ -62,7 +62,7 @@ void nahid()
 
 	vector<int>sorted = TopoSort(n); //sorted vector..
 	assert(sorted.size() == n); //condition ta true na holey ekta runtime error generate kore.known as
-	//assertion error..condition true holey continue..
+	//assertion error..condition false holey continue..
 
 //alternative:
 	if (sorted.size() == 0)cout << "Sorry!Toposort is impossible!" << endl;
