@@ -139,6 +139,10 @@ int main()
 
 	return 0;
 }
+/*
+The time complexity of the Prim's Algorithm is O ( ( V + E ) l o g V )
+because each vertex is inserted in the priority queue only once and insertion in priority queue take logarithmic time.
+*/
 
 
 
@@ -238,6 +242,7 @@ int main()
 
 	return 0;
 }
+//Kruskal's algorithm's time complexity is O(E log V), V being the number of vertices.
 
 
 /**
