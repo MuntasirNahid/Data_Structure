@@ -98,6 +98,11 @@ int main()
 
     return 0;
 }
+
+/*
+ The above algorithm calls DFS, finds reverse of the graph and again calls DFS. DFS takes O(V+E) for a graph represented using adjacency list.
+ Reversing a graph also takes O(V+E) time.
+*/
 /**
 7 8
 0 1
