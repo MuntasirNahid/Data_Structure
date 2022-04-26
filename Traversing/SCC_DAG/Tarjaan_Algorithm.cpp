@@ -46,7 +46,7 @@ void dfs(int at)
         to = adj[at][i];
         if (ids[to] == -1)
             dfs(to);
-        if (visited[to]) // jodi adjacent ta age thekei stack e thakey
+        if (visited[to]) // jodi adjacent ta age thekei stack e thakey tahole low hishab korbo compare korey
         {
             low[at] = min(low[at], low[to]);
         }
@@ -102,3 +102,5 @@ int main()
     cout << "Number of Strongly Connected Component's are=" << sccCount << endl;
 }
 //https://www.youtube.com/watch?v=wUgWX0nc4NY&ab_channel=WilliamFiset
+
+//The time complexity of Tarjan's Algorithm  is O(V + E)
