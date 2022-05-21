@@ -62,6 +62,19 @@ int main()
 
     return 0;
 }
+
+
+/*
+Why d[u]<low[v]?
+-
+If discovery_time[U] is equal to low[V] it means that there is a path from V that goes back to U ( V in this case represents an adjacent node of U ),
+or in other words we can just say that we found a cycle rooted in U. For articulation points if we remove U from the graph it will increase the number of 
+connected components, but in the case of bridges if we remove the edge UV the number of connected components will remain the same.
+For bridges we need to be sure that the edge UV is not involved in any cycle.
+A way to be sure of this is just to check that low[V] is strictly greater than discovery_time[U]
+
+
+*/
 /**
 7 7
 0 1
