@@ -44,7 +44,11 @@ void updateRange(int node,int st,int en,int l,int r,int val)//l,r=starting and e
  	 // Make pending updates using value stored in lazy nodes
        
  	tree[node]+=(en-st+1)*lazy[node];//nicer shobgula node er j update kora lagbey oigulaw tow add hobey tree[node] er moddhe..tai(en-st+1) multiply kortey hoise
- 	// checking if it is not leaf node because if
+ 	//suppose there is update for arr[start] to arr[end] adding v so total added is (end-start+1)*v .As in a segment tree a node (tree[node] )gives sum of array
+	 //values it covers ,so we updated tree node as tree[node]+=(end-start+1)*v ,later we will update left and right node
+	 
+	 
+	 // checking if it is not leaf node because if
         // it is leaf node then we cannot go further
  	if(st!=en)
  	{
