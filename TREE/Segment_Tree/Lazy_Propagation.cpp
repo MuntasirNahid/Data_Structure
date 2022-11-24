@@ -77,8 +77,8 @@ void updateRange(int node,int st,int en,int l,int r,int val)//l,r=starting and e
             // rather than updating the segment tree itelf
             // Since we don't need these updated values now
             // we postpone updates by storing values in lazy[]
- 		lazy[node*2]=val;
- 		lazy[node*2 +1]=val;
+ 		lazy[node*2]+=val;
+ 		lazy[node*2 +1]+=val;
  	}
  	return;
  }
@@ -120,3 +120,123 @@ int main()
 	//bla bla
 
 }
+
+/*
+#include <bits/stdc++.h>
+#define sz 1000005
+#define ll long long
+using namespace std;
+ll tree[sz], lazy[sz];
+ll z;
+
+void updateRange(ll node, ll st, ll en, ll l, ll r, ll val) // l,r=starting and ending indexes of update query.
+{
+
+   if (lazy[node])
+   {
+
+      tree[node] += ((en - st) + 1) * lazy[node]; // nicer shobgula node er j update kora lagbey oigulaw tow add hobey tree[node] er moddhe..tai(en-st+1) multiply kortey hoise
+
+      if (st != en)
+      {
+
+         lazy[node * 2] += lazy[node];
+         lazy[node * 2 + 1] += lazy[node];
+      }
+
+      lazy[node] = 0;
+   }
+   // out of range
+   if (st > en || st > r || en < l)
+      return;
+
+   if (st >= l && en <= r)
+   {
+
+      tree[node] += ((en - st) + 1) * val;
+
+      if (st != en)
+      {
+
+         lazy[node * 2] += val;
+         lazy[node * 2 + 1] += val;
+      }
+      return;
+   }
+
+   ll mid = (st + en) / 2;
+   updateRange(node * 2, st, mid, l, r, val);
+   updateRange(node * 2 + 1, mid + 1, en, l, r, val);
+
+   tree[node] = tree[node * 2] + tree[node * 2 + 1];
+}
+
+ll query(ll node, ll st, ll en, ll l, ll r)
+{
+   if (st > en || st > r || en < l)
+      return 0; // out of range
+   if (lazy[node] != 0)
+   {
+
+      tree[node] += (en - st + 1) * lazy[node];
+      if (st != en)
+      {
+         lazy[node * 2] += lazy[node];
+         lazy[node * 2 + 1] += lazy[node];
+      }
+      lazy[node] = 0;
+   }
+   if (st >= l && en <= r)
+      return tree[node];
+   ll mid = (st + en) / 2;
+   ll ret = 0;
+   ret += query(node * 2, st, mid, l, r);
+   ret += query(node * 2 + 1, mid + 1, en, l, r);
+   return ret;
+}
+void init()
+{
+   for (ll i = 0; i < sz; i++)
+   {
+      tree[i] = 0, lazy[i] = 0;
+   }
+}
+void nahid()
+{
+   //cout << "Case " << ++z << ":" << endl;
+
+   ll n, q;
+   cin >> n >> q;
+   init();
+   while (q--)
+   {
+      ll m;
+      cin >> m;
+      if (m == 0)
+      {
+         ll x, y, v;
+         cin >> x >> y >> v;
+         updateRange(1, 0, n - 1, x-1, y-1, v);
+         // for (ll i = 0; i < n; i++)
+         //    cout << tree[i] << " ";
+         // cout << endl;
+      }
+      else
+      {
+         ll x, y;
+         cin >> x >> y;
+         cout << query(1, 0, n - 1, x-1, y-1) << endl;
+      }
+   }
+}
+int main()
+{
+   ll t;
+
+   cin >> t;
+   while (t--)
+   {
+      nahid();
+   }
+}
+*/
